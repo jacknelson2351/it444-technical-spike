@@ -1,0 +1,2 @@
+load_gen wrote 119800 records in 120s (~998/s)
+events total after load finished: 120983 (expected 1163 + load records)

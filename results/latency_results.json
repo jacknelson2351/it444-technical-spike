@@ -1,0 +1,146 @@
+{
+  "run_at": "2026-11-23T20:04:16+00:00",
+  "passed": 20,
+  "trials": 20,
+  "limit_s": 5.0,
+  "required": 19,
+  "result": "PASS",
+  "min_s": 0.96,
+  "median_s": 0.99,
+  "max_s": 1.2,
+  "mean_s": 1.03,
+  "memory_before": {
+    "heap_used_mb": 127,
+    "heap_max_mb": 1024,
+    "process_rss_mb": 1364,
+    "host_mem_total_mb": 6144
+  },
+  "memory_after": {
+    "heap_used_mb": 239,
+    "heap_max_mb": 1024,
+    "process_rss_mb": 1371,
+    "host_mem_total_mb": 6144
+  },
+  "trials_detail": [
+    {
+      "trial": 1,
+      "src_ip": "198.51.100.1",
+      "seconds": 1.2,
+      "pass": true
+    },
+    {
+      "trial": 2,
+      "src_ip": "198.51.100.2",
+      "seconds": 0.98,
+      "pass": true
+    },
+    {
+      "trial": 3,
+      "src_ip": "198.51.100.3",
+      "seconds": 0.99,
+      "pass": true
+    },
+    {
+      "trial": 4,
+      "src_ip": "198.51.100.4",
+      "seconds": 1.1,
+      "pass": true
+    },
+    {
+      "trial": 5,
+      "src_ip": "198.51.100.5",
+      "seconds": 0.98,
+      "pass": true
+    },
+    {
+      "trial": 6,
+      "src_ip": "198.51.100.6",
+      "seconds": 0.99,
+      "pass": true
+    },
+    {
+      "trial": 7,
+      "src_ip": "198.51.100.7",
+      "seconds": 0.98,
+      "pass": true
+    },
+    {
+      "trial": 8,
+      "src_ip": "198.51.100.8",
+      "seconds": 1.08,
+      "pass": true
+    },
+    {
+      "trial": 9,
+      "src_ip": "198.51.100.9",
+      "seconds": 0.99,
+      "pass": true
+    },
+    {
+      "trial": 10,
+      "src_ip": "198.51.100.10",
+      "seconds": 0.99,
+      "pass": true
+    },
+    {
+      "trial": 11,
+      "src_ip": "198.51.100.11",
+      "seconds": 1.09,
+      "pass": true
+    },
+    {
+      "trial": 12,
+      "src_ip": "198.51.100.12",
+      "seconds": 0.97,
+      "pass": true
+    },
+    {
+      "trial": 13,
+      "src_ip": "198.51.100.13",
+      "seconds": 0.97,
+      "pass": true
+    },
+    {
+      "trial": 14,
+      "src_ip": "198.51.100.14",
+      "seconds": 1.08,
+      "pass": true
+    },
+    {
+      "trial": 15,
+      "src_ip": "198.51.100.15",
+      "seconds": 0.97,
+      "pass": true
+    },
+    {
+      "trial": 16,
+      "src_ip": "198.51.100.16",
+      "seconds": 1.07,
+      "pass": true
+    },
+    {
+      "trial": 17,
+      "src_ip": "198.51.100.17",
+      "seconds": 0.97,
+      "pass": true
+    },
+    {
+      "trial": 18,
+      "src_ip": "198.51.100.18",
+      "seconds": 1.08,
+      "pass": true
+    },
+    {
+      "trial": 19,
+      "src_ip": "198.51.100.19",
+      "seconds": 0.96,
+      "pass": true
+    },
+    {
+      "trial": 20,
+      "src_ip": "198.51.100.20",
+      "seconds": 1.09,
+      "pass": true
+    }
+  ]
+}

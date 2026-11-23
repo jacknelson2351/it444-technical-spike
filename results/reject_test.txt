@@ -1,0 +1,5 @@
+index           docs.count
+events-rejected          2
+events                1143
+{"sensor":"suricata","reject_reason":"missing: dest_ip,dest_port"}
+{"sensor":"zeek","reject_reason":"missing: dest_ip,dest_port"}

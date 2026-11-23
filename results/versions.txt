@@ -1,0 +1,5 @@
+This is Suricata version 7.0.3 RELEASE
+zeek version 7.0.9
+Fluent Bit v3.2.10
+OpenSearch 2.17.1
+ET Open rules: 53529 alert rules (suricata-update, 2026-11-23)

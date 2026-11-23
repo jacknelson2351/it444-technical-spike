@@ -1,0 +1,1 @@
+eve_total=1272 suricata_alerts=81 zeek_conn=1062 in_scope=1143

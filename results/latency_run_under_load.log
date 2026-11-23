@@ -1,0 +1,44 @@
+trial  1  203.0.113.1       1.41 s  PASS
+trial  2  203.0.113.2       1.30 s  PASS
+trial  3  203.0.113.3       1.09 s  PASS
+trial  4  203.0.113.4       1.18 s  PASS
+trial  5  203.0.113.5       1.08 s  PASS
+trial  6  203.0.113.6       1.08 s  PASS
+trial  7  203.0.113.7       1.28 s  PASS
+trial  8  203.0.113.8       1.07 s  PASS
+trial  9  203.0.113.9       1.19 s  PASS
+trial 10  203.0.113.10      1.07 s  PASS
+trial 11  203.0.113.11      1.28 s  PASS
+trial 12  203.0.113.12      1.07 s  PASS
+trial 13  203.0.113.13      1.28 s  PASS
+trial 14  203.0.113.14      1.06 s  PASS
+trial 15  203.0.113.15      1.08 s  PASS
+trial 16  203.0.113.16      0.98 s  PASS
+trial 17  203.0.113.17      1.06 s  PASS
+trial 18  203.0.113.18      1.17 s  PASS
+trial 19  203.0.113.19      1.06 s  PASS
+trial 20  203.0.113.20      1.18 s  PASS
+{
+  "run_at": "2026-11-23T20:05:54+00:00",
+  "passed": 20,
+  "trials": 20,
+  "limit_s": 5.0,
+  "required": 19,
+  "result": "PASS",
+  "min_s": 0.98,
+  "median_s": 1.08,
+  "max_s": 1.41,
+  "mean_s": 1.15,
+  "memory_before": {
+    "heap_used_mb": 304,
+    "heap_max_mb": 1024,
+    "process_rss_mb": 1374,
+    "host_mem_total_mb": 6144
+  },
+  "memory_after": {
+    "heap_used_mb": 615,
+    "heap_max_mb": 1024,
+    "process_rss_mb": 1401,
+    "host_mem_total_mb": 6144
+  }
+}

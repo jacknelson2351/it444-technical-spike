@@ -1,0 +1,15 @@
+stored records in events: 1143
+  missing @timestamp : 0
+  missing src_ip     : 0
+  missing dest_ip    : 0
+  missing src_port   : 0
+  missing dest_port  : 0
+  missing protocol   : 0
+  missing sensor     : 0
+  missing severity   : 0
+  sensor=suricata: 81
+  sensor=zeek: 1062
+  protocols: {'tcp': 1080, 'udp': 54, 'icmp': 9}
+  severities: {3: 1089, 2: 51, 1: 3}
+  distinct event_id: 1143
+  stored fields: ['@timestamp', '_route', 'category', 'conn_state', 'dest_ip', 'dest_port', 'event_id', 'flow_id', 'protocol', 'sensor', 'severity', 'signature', 'signature_id', 'src_ip', 'src_port', 'zeek_uid']
