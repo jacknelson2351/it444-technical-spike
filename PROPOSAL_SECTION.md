@@ -1,0 +1,14 @@
+## Paste into Feasibility Evidence → "Jack Nelson: normalization and indexing (FR-02, FR-03, NFR-01)"
+(replace the [JACK TO FILL] line)
+
+Declared question: whether Suricata and Zeek output can be normalized to the FR-02 schema and indexed in OpenSearch within 5 seconds in 19 of 20 trials.
+
+I tested Fluent Bit, the normalization tool already in our BOM, on a Linux VM (2 vCPU, 6 GB) because the EnGeo host was not available. Nine captures were replayed offline through Suricata 7.0.3 (ET Open plus Austin's custom SYN-scan rule) and Zeek 7.0.9: eight public Practical Packet Analysis captures (exploit kit to CryptoWall 4, Aurora, DVWA SQL injection and others) and Austin's Nmap scan. Fluent Bit 3.2 tailed eve.json and conn.log, and a Lua filter mapped both into the FR-02 schema and routed incomplete records to events-rejected. OpenSearch 2.17.1 ran as a single node with a 1 GB heap. All 1,143 real events (81 Suricata alerts, 1,062 Zeek connections) were stored with every required field, none were lost, and 2 of 2 deliberately malformed records went to events-rejected. In 20 timed trials, a new alert was searchable by source IP in 20 of 20 under 5 seconds (median 0.99 s, max 1.20 s). A second run under about 1,000 events per second of background load also passed 20 of 20 (median 1.08 s, max 1.41 s), with all 119,800 load events indexed. Latency is set by Fluent Bit's 1 s flush and OpenSearch's 1 s refresh, not by load. OpenSearch heap rose from 127 MB to 615 MB of 1,024 MB at about 121,000 documents. ET Open did not flag the Nmap scan; only the custom rule did. The result changed the design: Fluent Bit is confirmed for the Normalization Pipeline (no Logstash or custom script), OpenSearch should get a 4 GB heap on the EnGeo host, FR-02 needs two rules made explicit (ports stored as 0 for ICMP, and a severity mapping for Zeek records, which carry none), and the internal _route field must be stripped before indexing. Evidence: [YOUR GITHUB REPO URL].
+
+Limits: a cloud VM rather than the lab host, offline PCAP replay rather than live capture, latency measured from log write to searchable (excludes sensor detection and dashboard rendering), Zeek notice.log not exercised, OpenSearch security plugin off, one run per condition.
+
+## Other spots in the proposal this resolves
+- System Design → Still unresolved → Normalization tool row: replace "[TEAM TO FILL: spike result.]" with
+  "Resolved by the spike: Fluent Bit with a Lua mapping indexed 1,143 of 1,143 events with every FR-02 field and made new alerts searchable in about 1 s (20 of 20 under 5 s, also under load)."
+- Risk Management → risk 6: rescore L 1, I 2, score 2, and add to "Status after the spikes":
+  "Risk 6 was tested: indexing stayed near 1 s (max 1.41 s) even at about 1,000 events per second, so the remaining action is sizing the OpenSearch heap at 4 GB on the EnGeo host."
